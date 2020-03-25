@@ -7,6 +7,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { ServiceComponent } from './service/service.component';
 import { AboutComponent } from './about/about.component';
+import {NotFoundComponent} from "./components/not-found/not-found.component";
 
 const routes: Routes = [
   {
@@ -32,8 +33,12 @@ const routes: Routes = [
     component: ServiceComponent
   },
   {
-    path: 'ablout',
+    path: 'about',
     component: AboutComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 
 ];

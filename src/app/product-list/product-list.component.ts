@@ -7,17 +7,24 @@ import {ProductService} from '../product.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products:Product[];
+  products: Product[];
   selected: Product;
   constructor(
-    private ProductService : ProductService
+    private productService: ProductService
   ) { }
   ngOnInit(): void {
-    this.products = this.ProductService.getProductList();
+    this.getProducts();
+
+    // this.products = this.ProductService.getProductList();
   }
-  
-  removeProduct = (id:number) => {
-    this.products = this.ProductService.deleteProduct(id);
+  getProducts() {
+    this.productService.getProducts().subscribe(response => {
+      this.products = response;
+    }, error => {
+
+    });
   }
-  
+
+  removeProduct = (id: number) => this.productService.removeProductById(id);
+
 }

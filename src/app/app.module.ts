@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// import { HttpClient } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatogeryComponent } from './catogery/catogery.component';
@@ -16,6 +16,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
+import { HttpClientModule } from "@angular/common/http";
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
+
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,10 +34,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ServiceComponent,
     HomepageComponent,
     ProductDetailComponent,
-    
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule
   ],
