@@ -24,9 +24,9 @@ export class ProductService {
 
   }
 
-  // getProductById(id: number): Observable<Product> {
-  //   return this.http.get<Product>(this.products + `/${id}`);
-  // }
+  getProductById(id: number): Observable<Product> {
+    return this.http.get<Product>(this.products + `/${id}`);
+  }
 
   createProduct(product: Product): Observable<Product> {
     return this.http.post<Product>(this.products, product);

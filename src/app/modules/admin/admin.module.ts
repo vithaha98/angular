@@ -8,11 +8,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductCreatComponent } from './product-creat/product-creat.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 
 
 @NgModule({
-  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent],
+  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent],
   imports: [
     CommonModule,
     NgbModule,
