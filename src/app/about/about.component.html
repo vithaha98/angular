@@ -1,1 +1,81 @@
-<p>about works!</p>
+<div class="main-sec inner-page">
+  <!-- //header -->
+  <header class="py-sm-3 pt-3 pb-2" id="home">
+    <div class="container">
+      <!-- nav -->
+      <div class="top-w3pvt d-flex">
+        <div id="logo">
+          <h1> <a href="index.html"><span class="log-w3pvt">B</span>aggage</a> <label class="sub-des">Online Store</label></h1>
+        </div>
+
+
+      </div>
+      <div class="nav-top-wthree">
+        <nav>
+          <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu">
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/about']">About Us</a></li>
+            <li>
+              <!-- First Tier Drop Down -->
+              <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+              </label>
+            </li>
+
+            <li class="active"><a [routerLink]="['/products']">ProDuct</a></li>
+            <li><a  [routerLink]="['/service']">Service</a></li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+        <div class="search-form ml-auto">
+          <div class="form-w3layouts-grid">
+            <form action="#" method="post" class="newsletter">
+              <input class="search" type="search" placeholder="Search here..." required="">
+              <button class="form-control btn" value=""><span class="fa fa-search"></span></button>
+
+            </form>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+</div>
+
+<section class="banner-bottom py-5">
+  <div class="container py-md-5">
+    <div class="row grids-wthree-info">
+      <div class="col-lg-6 bag-img">
+        <img src="../assets/images/bag1.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 ab-info-con ab-inf-page text-left">
+        <h4>About Our Baggage</h4>
+        <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
+        <a href="" class="btn shop mt-4">Read More</a>
+      </div>
+    </div>
+    <div class="row grids-wthree-info text-center">
+      <div class="col-lg-4 ab-content">
+        <div class="ab-info-con">
+          <h4>Fast &amp; Free Delivery</h4>
+          <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 ab-content">
+        <div class="ab-info-con">
+          <h4>Safe &amp; Secure Payments</h4>
+          <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 ab-content">
+        <div class="ab-info-con">
+          <h4>100% Money Back Guarantee</h4>
+          <p>Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet eleifend integer,Pellentesque maximus libero.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -22,5 +22,4 @@ export class ProductAddComponent implements OnInit {
       this.router.navigate(['/products']);
     });
   }
-  // code nhuloz
 }

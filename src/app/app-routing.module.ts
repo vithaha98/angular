@@ -11,7 +11,7 @@ import {NotFoundComponent} from "./components/not-found/not-found.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', // localhost
     redirectTo: 'products',
     pathMatch: 'full'
   },
@@ -37,9 +37,14 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
+    path: 'admin', // localhost/admin
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent
-  }
+  },
+
 
 ];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../Product';
 import {ProductService} from '../product.service';
+import {Title} from '@angular/platform-browser';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -10,9 +11,11 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   selected: Product;
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private titleService: Title
   ) { }
   ngOnInit(): void {
+    this.titleService.setTitle('Products');
     this.getProducts();
 
     // this.products = this.ProductService.getProductList();
@@ -25,6 +28,11 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  removeProduct = (id: number) => this.productService.removeProductById(id);
+  removeProduct(id){
+    this.productService.removeProductById(id).subscribe(response => {
+      this.products = this.products.filter(product => product.id != response.id)
+    });
+  };
+
 
 }

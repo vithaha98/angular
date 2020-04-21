@@ -6,7 +6,11 @@ import  { Observable } from "rxjs";
  get du lieu
 */
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
+const httpOption = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json'
+  })
+};
 @Injectable({
   providedIn: 'root'
 })
@@ -30,40 +34,9 @@ export class ProductService {
   }
 
   removeProductById(id: number): Observable<Product> {
-    return this.http.delete<Product>(this.products + `/${id}`);
+    return this.http.get<Product>(this.products + `/${id}`, httpOption);
   }
-
   updateProductById(data: Product): Observable<Product> {
     return this.http.put<Product>(this.products + `/${data.id}`, data);
   }
-
-
-  // getProductList() {
-  //   return this.products;
-  // }
-  // getProduct(id: Number){
-  //   const product = this.products.find(product => product.id == id);
-  //   console.log(product);
-  //   if (product) {
-  //     return product;
-  //   } else {
-  //     throw Error('Not Found');
-  //   }
-  // }
-  // addProduct(product){
-  //   let newObj =
-  //   {
-  //     id:6,
-  //     ...product,
-  //     status:true
-  //   };
-  //   this.products.push(newObj);
-  // }
-  // deleteProduct(id:Number){
-  //   this.products = this.getProductList().filter(product=>product.id !== id);
-  //   return this.products;
-  // }
-
-
-
 }

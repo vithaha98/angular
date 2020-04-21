@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, Title} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // import { HttpClient } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +18,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
 import { HttpClientModule } from "@angular/common/http";
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 // @ts-ignore
@@ -34,15 +35,19 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ServiceComponent,
     HomepageComponent,
     ProductDetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

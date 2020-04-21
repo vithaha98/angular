@@ -1,24 +1,77 @@
-<div class="row">
-    <div *ngFor="let product of products" class="col-lg-4 col-md-6 mb-4">    
-        <div class="card h-100">
-            <a href="#"><img class="card-img-top" [src]="product.img" alt=""></a>
-            <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#">{{product.name}}</a>
-                </h4>
-                <h5>${{product.price}}</h5>
-                <p class="card-text">{{product.desc}}</p>
-                <span>{{product.status ? 'con hang' : 'het hang'}}</span>
-
-            </div>
-            <button class="btn btn-primary m-3 d-block">Buy now</button>
-            <a class="btn btn-primary" [routerLink]="['/product', product.id]" >Chi tiet</a>
-            <div class="card-footer">
-                <button (click)="removeProduct(product.id)">Delete</button>
-            </div>
+<div class="main-sec inner-page">
+  <!-- //header -->
+  <header class="py-sm-3 pt-3 pb-2" id="home">
+    <div class="container">
+      <!-- nav -->
+      <div class="top-w3pvt d-flex">
+        <div id="logo">
+          <h1> <a href="index.html"><span class="log-w3pvt">B</span>aggage</a> <label class="sub-des">Online Store</label></h1>
         </div>
+
+
+      </div>
+      <div class="nav-top-wthree">
+        <nav>
+          <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu">
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/about']">About Us</a></li>
+            <li>
+              <!-- First Tier Drop Down -->
+              <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+              </label>
+            </li>
+
+            <li class="active"><a [routerLink]="['/products']">ProDuct</a></li>
+            <li><a  [routerLink]="['/service']">Service</a></li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+        <div class="search-form ml-auto">
+          <div class="form-w3layouts-grid">
+            <form action="#" method="post" class="newsletter">
+              <input class="search" type="search" placeholder="Search here..." required="">
+              <button class="form-control btn" value=""><span class="fa fa-search"></span></button>
+
+            </form>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
     </div>
-    <div *ngIf="selected">
-        {{selected.name}}
-    </div>
+  </header>
+  <!-- //header -->
 </div>
+<section class="banner-bottom py-5">
+  <div class="container py-5">
+    <h3 class="title-wthree mb-lg-5 mb-4 text-center">Shop Now</h3>
+    <!--/row-->
+    <div class="row shop-wthree-info text-center">
+
+      <div *ngFor="let product of products" class="col-lg-3 shop-info-grid text-center mt-4">
+        <div class="product-shoe-info shoe">
+          <div class="men-thumb-item">
+            <img [src]="product.img" class="img-fluid" alt="">
+
+          </div>
+          <div class="item-info-product">
+            <h4>
+              <a [routerLink]="['/product', product.id]" >{{product.name}}</a>
+            </h4>
+
+            <div class="product_price">
+              <div class="grid-price">
+                <span class="money"> ${{product.price}}</span>
+              </div>
+<!--              <button (click)="removeProduct(product.id)">-->
+<!--                delete-->
+<!--              </button>-->
+              <a class="btn btn-primary" [routerLink]="['/product', product.id]" >Chi tiet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
