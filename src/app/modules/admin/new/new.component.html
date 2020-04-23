@@ -1,0 +1,66 @@
+<section id="main-content">
+  <section class="wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-agile-info">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              News Manager
+<!--              <a [routerLink]="['/admin/products/create']">add</a>-->
+            </div>
+            <div>
+              <table   class="table" ui-jq="footable" ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+                <thead>
+                <tr>
+                  <th data-breakpoints="xs">ID</th>
+                  <th>Name</th>
+
+                  <th data-breakpoints="xs">Desc</th>
+
+                  <th data-breakpoints="xs sm md" data-title="DOB"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let new of news| slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize" data-expanded="true">
+                  <td>{{new.id}}</td>
+                  <td>{{new.name}}</td>
+
+                  <td>{{new.desc}}</td>
+                  <td>
+<!--                    <button class="btn btn-primary" (click)="removeProduct(product.id)">-->
+<!--                      remove-->
+<!--                    </button>-->
+<!--                    <a class="btn btn-primary" [routerLink]="['/admin/products/edit/', product.id]">Edit</a>-->
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <ngb-pagination
+                [(page)]="page"
+                [pageSize]="pageSize"
+                [collectionSize]="news.length"></ngb-pagination>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    <ngb-pagination-->
+    <!--      [(page)]="page"-->
+    <!--      [pageSize]="pageSize"-->
+    <!--      [collectionSize]="products.length">-->
+
+    <!--    </ngb-pagination>-->
+  </section>
+  <!-- footer -->
+
+  <!-- / footer -->
+</section>

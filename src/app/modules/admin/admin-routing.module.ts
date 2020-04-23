@@ -4,6 +4,7 @@ import {AdminComponent} from './admin.component';
 import {ProductListComponent} from './product-list/product-list.component';
 import {ProductCreatComponent} from './product-creat/product-creat.component';
 import {ProductEditComponent} from './product-edit/product-edit.component';
+import {NewComponent} from './new/new.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
           }
 
         ]
+      },
+      {
+        path: 'news',
+        component: NewComponent
       }
     ]
   }

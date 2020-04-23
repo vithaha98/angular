@@ -9,11 +9,12 @@ import { ProductCreatComponent } from './product-creat/product-creat.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { NewComponent } from './new/new.component';
 
 
 
 @NgModule({
-  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent],
+  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent, NewComponent],
   imports: [
     CommonModule,
     NgbModule,
