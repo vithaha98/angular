@@ -32,7 +32,7 @@
                 <tbody>
                 <tr *ngFor="let new of news| slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize" data-expanded="true">
                   <td>{{new.id}}</td>
-                  <td>{{new.name}}</td>
+                  <td><a [routerLink]="['/admin/news/', new.id]">{{new.name}}</a></td>
 
                   <td>{{new.desc}}</td>
                   <td>

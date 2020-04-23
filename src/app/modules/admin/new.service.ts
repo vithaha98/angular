@@ -14,4 +14,7 @@ export class NewService {
   getNews(): Observable<News[]>{
     return this.http.get<News[]>(this.news);
   }
+  getNewsId(id: number): Observable<News>{
+    return this.http.get<News>(this.news + `/${id}`);
+  }
 }

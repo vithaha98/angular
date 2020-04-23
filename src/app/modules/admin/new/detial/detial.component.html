@@ -1,0 +1,36 @@
+<section id="main-content">
+  <section class="wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Detial</h2>
+        <table class="table" ui-jq="footable" ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+          <thead>
+          <tr>
+            <th data-breakpoints="xs">Id</th>
+            <th>Name</th>
+            <th>img</th>
+            <th>Desc</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{news.id}}</td>
+            <td>{{news.name}}</td>
+            <td> <img src="{{news.img}}" alt=""></td>
+            <td>{{news.desc}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</section>

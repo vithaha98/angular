@@ -10,11 +10,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { NewComponent } from './new/new.component';
+import { DetialComponent } from './new/detial/detial.component';
 
 
 
 @NgModule({
-  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent, NewComponent],
+  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent, NewComponent, DetialComponent],
   imports: [
     CommonModule,
     NgbModule,

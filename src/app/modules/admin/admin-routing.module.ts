@@ -5,6 +5,7 @@ import {ProductListComponent} from './product-list/product-list.component';
 import {ProductCreatComponent} from './product-creat/product-creat.component';
 import {ProductEditComponent} from './product-edit/product-edit.component';
 import {NewComponent} from './new/new.component';
+import {DetialComponent} from './new/detial/detial.component';
 
 const routes: Routes = [
   {
@@ -35,7 +36,10 @@ const routes: Routes = [
       },
       {
         path: 'news',
-        component: NewComponent
+        children: [
+          {path:'',component: NewComponent},
+          {path:':id',component: DetialComponent}
+        ]
       }
     ]
   }
