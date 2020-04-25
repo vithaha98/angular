@@ -6,6 +6,7 @@ import {ProductCreatComponent} from './product-creat/product-creat.component';
 import {ProductEditComponent} from './product-edit/product-edit.component';
 import {NewComponent} from './new/new.component';
 import {DetialComponent} from './new/detial/detial.component';
+import {EditComponent} from "./new/edit/edit.component";
 
 const routes: Routes = [
   {
@@ -38,7 +39,8 @@ const routes: Routes = [
         path: 'news',
         children: [
           {path:'',component: NewComponent},
-          {path:':id',component: DetialComponent}
+          {path:':id',component: DetialComponent},
+          {path: 'edit/:id',component: EditComponent}
         ]
       }
     ]

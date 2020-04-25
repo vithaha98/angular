@@ -11,11 +11,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { NewComponent } from './new/new.component';
 import { DetialComponent } from './new/detial/detial.component';
+import { EditComponent } from './new/edit/edit.component';
 
 
 
 @NgModule({
-  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent, NewComponent, DetialComponent],
+  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent, NewComponent, DetialComponent, EditComponent],
   imports: [
     CommonModule,
     NgbModule,

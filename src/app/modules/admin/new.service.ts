@@ -7,7 +7,7 @@ import {News} from '../../News';
   providedIn: 'root'
 })
 export class NewService {
-  news = 'https://5e7aaa520e04630016332391.mockapi.io/product';;
+  news = 'https://5ea1b36cb9f5ca00166c20fd.mockapi.io/news';;
   constructor(
     private http: HttpClient
   ) { }

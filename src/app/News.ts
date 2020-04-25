@@ -1,6 +1,6 @@
 export class News{
   id: number;
   name: string;
-  img: string;
+  avatar: string;
   desc: string;
 }

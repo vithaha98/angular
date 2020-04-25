@@ -34,7 +34,7 @@
                 <tr *ngFor="let product of products | slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize" data-expanded="true">
                   <td>{{product.id}}</td>
                   <td>{{product.name}}</td>
-                  <td>{{product.price}}</td>
+                  <td>${{product.price}}</td>
                   <td>{{product.desc}}</td>
                   <td><img src="{{product.img}}" alt=""></td>
                   <td>
