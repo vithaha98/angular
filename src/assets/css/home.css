@@ -528,7 +528,7 @@ li > a:only-child:after {
 
 /*--about--*/
 .ab-content-img {
-  background: url(assets/images/banner1.jpg) no-repeat center;
+  background: url(../../assets/images/banner1.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
