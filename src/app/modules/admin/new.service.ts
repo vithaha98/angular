@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {News} from '../../News';
+import {Product} from "../../Product";
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,8 @@ export class NewService {
   }
   getNewsId(id: number): Observable<News>{
     return this.http.get<News>(this.news + `/${id}`);
+  }
+  updateNewid(data: News): Observable<News> {
+    return this.http.put<News>(this.news + `/${data.id}`, data);
   }
 }

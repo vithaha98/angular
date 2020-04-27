@@ -2,7 +2,22 @@
   <section class="wrapper">
     <div class="row">
       <div class="col-md-12">
-<p>edit works!</p>
+        <form>
+          <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="news.name">
+          </div>
+          <div class="form-group">
+            <label for="">IMG</label>
+            <img src="{{news.avatar}}" width="300px" alt="">
+            <input type="text" class="form-control" name="price" [(ngModel)]="news.avatar">
+          </div>
+          <div class="form-group">
+            <label for="">DESC</label>
+            <textarea class="form-control" name="desc" [(ngModel)]="news.desc"> </textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="editnew()">Submit</button>
+        </form>
       </div>
     </div>
   </section>

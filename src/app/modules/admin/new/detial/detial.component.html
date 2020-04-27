@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <h2>Detial</h2>
-        <table class="table" ui-jq="footable" ui-options="{
+        <table *ngIf="news" class="table" ui-jq="footable" ui-options="{
         &quot;paging&quot;: {
           &quot;enabled&quot;: true
         },
@@ -25,7 +25,7 @@
           <tr>
             <td>{{news.id}}</td>
             <td>{{news.name}}</td>
-            <td> <img src="{{news.avatar}}" alt=""></td>
+            <td> <img src="{{news.avatar}}" alt="" width="300px"></td>
             <td>{{news.desc}}</td>
           </tr>
           </tbody>
