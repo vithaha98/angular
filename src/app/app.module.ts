@@ -19,6 +19,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { HttpClientModule } from "@angular/common/http";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 // @ts-ignore
@@ -44,6 +45,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    NgbModule
   ],
   providers: [
     Title

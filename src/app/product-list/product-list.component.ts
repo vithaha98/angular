@@ -10,6 +10,8 @@ import {Title} from '@angular/platform-browser';
 export class ProductListComponent implements OnInit {
   products: Product[];
   selected: Product;
+  page = 1;
+  pageSize = 10;
   constructor(
     private productService: ProductService,
     private titleService: Title

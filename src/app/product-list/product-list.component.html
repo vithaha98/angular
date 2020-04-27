@@ -49,7 +49,7 @@
     <!--/row-->
     <div class="row shop-wthree-info text-center">
 
-      <div *ngFor="let product of products" class="col-lg-3 shop-info-grid text-center mt-4">
+      <div *ngFor="let product of products | slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize" class="col-lg-3 shop-info-grid text-center mt-4">
         <div class="product-shoe-info shoe">
           <div class="men-thumb-item">
             <img [src]="product.img" class="img-fluid" alt="">
@@ -72,6 +72,13 @@
           </div>
         </div>
       </div>
+
     </div>
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]="products.length">
+
+    </ngb-pagination>
   </div>
 </section>
