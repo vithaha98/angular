@@ -26,13 +26,13 @@
 
                   <th data-breakpoints="xs">Desc</th>
 
-                  <th data-breakpoints="xs sm md" data-title="DOB"></th>
+                  <th data-breakpoints="xs sm md" data-title="DOB"><a class="btn btn-primary" [routerLink]="['/admin/news/add']">Add</a></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let new of news| slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize" data-expanded="true">
                   <td>{{new.id}}</td>
-                  <td><a [routerLink]="['/admin/news/', new.id]">{{new.name}}</a></td>
+                  <td><a [routerLink]="['/admin/news/detail/', new.id]">{{new.name}}</a></td>
 
                   <td>{{new.desc}}</td>
                   <td>

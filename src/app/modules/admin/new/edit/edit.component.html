@@ -2,7 +2,7 @@
   <section class="wrapper">
     <div class="row">
       <div class="col-md-12">
-        <form>
+        <form *ngIf="news">
           <div class="form-group">
             <label for="">Name</label>
             <input type="text" class="form-control" name="name" [(ngModel)]="news.name">

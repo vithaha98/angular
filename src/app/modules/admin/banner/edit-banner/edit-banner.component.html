@@ -1,0 +1,17 @@
+<section id="main-content">
+  <section class="wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <form *ngIf="banner">
+
+          <div class="form-group">
+            <img src="{{banner.img}}" width="500px" alt="">
+            <input type="text" class="form-control" name="price" [(ngModel)]="banner.img">
+          </div>
+
+          <button type="submit" class="btn btn-primary" (click)="editBanner()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>

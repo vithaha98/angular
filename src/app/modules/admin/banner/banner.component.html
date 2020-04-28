@@ -1,0 +1,48 @@
+<section id="main-content">
+  <section class="wrapper">
+    <div class="row">
+      <div class="col-md-12">
+<!--        <p>banner works!</p>-->
+        <table   class="table" ui-jq="footable" ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+          <thead>
+          <tr>
+            <th data-breakpoints="xs">ID</th>
+            <th>IMG</th>
+            <th data-breakpoints="xs sm md" data-title="DOB"><a class="btn btn-primary" [routerLink]="['/admin/banner/add-banner']">Add</a></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let banner of banner| slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize" data-expanded="true">
+            <td>{{banner.id}}</td>
+            <td>
+              <a [routerLink]="['/admin/banner/chitiet/', banner.id]">
+                <img src="{{banner.img}}" width="500px" alt="">
+              </a>
+
+            </td>
+            <td>
+              <button class="btn btn-primary" (click)="removeBanner(banner.id)">
+                remove
+              </button>
+              <a class="btn btn-primary" [routerLink]="['/admin/banner/edit-banner/', banner.id]">Edit</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <ngb-pagination
+          [(page)]="page"
+          [pageSize]="pageSize"
+          [collectionSize]="banner.length"></ngb-pagination>
+      </div>
+    </div>
+  </section>
+</section>

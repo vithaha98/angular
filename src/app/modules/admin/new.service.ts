@@ -27,4 +27,7 @@ export class NewService {
   removeId(id: number):Observable<News>{
     return this.http.delete<News>(this.news + `/${id}`,httpOption);
   }
+  addNew(news:News):Observable<News>{
+    return this.http.post<News>(this.news, news);
+  }
 }

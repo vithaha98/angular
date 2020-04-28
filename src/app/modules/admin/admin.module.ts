@@ -12,11 +12,17 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { NewComponent } from './new/new.component';
 import { DetialComponent } from './new/detial/detial.component';
 import { EditComponent } from './new/edit/edit.component';
+import { AddComponent } from './new/add/add.component';
+import { BannerComponent } from './banner/banner.component';
+import { DetailComponent } from './banner/detail/detail.component';
+import { DetailBannerComponent } from './banner/detail-banner/detail-banner.component';
+import { AddBannerComponent } from './banner/add-banner/add-banner.component';
+import { EditBannerComponent } from './banner/edit-banner/edit-banner.component';
 
 
 
 @NgModule({
-  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent, NewComponent, DetialComponent, EditComponent],
+  declarations: [AdminComponent, ProductListComponent, HeaderComponent, FooterComponent, ProductCreatComponent, ProductEditComponent, NewComponent, DetialComponent, EditComponent, AddComponent, BannerComponent, DetailComponent, DetailBannerComponent, AddBannerComponent, EditBannerComponent],
   imports: [
     CommonModule,
     NgbModule,
