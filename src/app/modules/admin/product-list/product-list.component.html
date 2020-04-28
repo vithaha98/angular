@@ -6,7 +6,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               Basic table
-              <a [routerLink]="['/admin/products/create']">add</a>
+
             </div>
             <div>
               <table   class="table" ui-jq="footable" ui-options="{
@@ -27,13 +27,13 @@
                   <th data-breakpoints="xs">Desc</th>
                   <th>img</th>
 
-                  <th data-breakpoints="xs sm md" data-title="DOB"></th>
+                  <th data-breakpoints="xs sm md" data-title="DOB"> <a [routerLink]="['/admin/products/create']">Add Product</a></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let product of products | slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize" data-expanded="true">
                   <td>{{product.id}}</td>
-                  <td>{{product.name}}</td>
+                  <td><a [routerLink]="['/admin/products/detail/', product.id]">{{product.name}}</a></td>
                   <td>${{product.price}}</td>
                   <td>{{product.desc}}</td>
                   <td><img src="{{product.img}}" width="150px" alt=""></td>
@@ -51,7 +51,9 @@
               <ngb-pagination
                 [(page)]="page"
                 [pageSize]="pageSize"
-                [collectionSize]="products.length"></ngb-pagination>
+                [collectionSize]="products.length">
+
+              </ngb-pagination>
             </div>
           </div>
         </div>

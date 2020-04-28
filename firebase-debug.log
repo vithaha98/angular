@@ -1,0 +1,27 @@
+[debug] [2020-04-28T14:27:13.863Z] ----------------------------------------------------------------------
+[debug] [2020-04-28T14:27:13.865Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-04-28T14:27:13.865Z] CLI Version:   8.2.0
+[debug] [2020-04-28T14:27:13.865Z] Platform:      darwin
+[debug] [2020-04-28T14:27:13.865Z] Node Version:  v12.16.2
+[debug] [2020-04-28T14:27:13.866Z] Time:          Tue Apr 28 2020 21:27:13 GMT+0700 (Indochina Time)
+[debug] [2020-04-28T14:27:13.867Z] ----------------------------------------------------------------------
+[debug] [2020-04-28T14:27:13.867Z] 
+[debug] [2020-04-28T14:27:13.873Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-28T14:27:13.874Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/user/Desktop/angular
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2020-04-28T14:27:18.417Z] Error: read EIO
+    at TTY.onStreamRead (internal/stream_base_commons.js:205:27)

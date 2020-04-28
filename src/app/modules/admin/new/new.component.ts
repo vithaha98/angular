@@ -26,5 +26,10 @@ export class NewComponent implements OnInit {
 
     });
   }
+  removeNew(id){
+    this.newService.removeId(id).subscribe(response =>{
+      this.news = this.news.filter(news => news.id !== response.id);
+    })
+  }
 
 }

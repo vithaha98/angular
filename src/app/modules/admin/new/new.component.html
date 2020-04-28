@@ -36,9 +36,9 @@
 
                   <td>{{new.desc}}</td>
                   <td>
-<!--                    <button class="btn btn-primary" (click)="removeProduct(product.id)">-->
-<!--                      remove-->
-<!--                    </button>-->
+                    <button class="btn btn-primary" (click)="removeNew(new.id)">
+                      remove
+                    </button>
                     <a class="btn btn-primary" [routerLink]="['/admin/news/edit/', new.id]">Edit</a>
                   </td>
                 </tr>

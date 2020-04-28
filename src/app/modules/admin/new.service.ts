@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {News} from '../../News';
-import {Product} from "../../Product";
-
+const httpOption = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json'
+  })
+};
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +23,8 @@ export class NewService {
   }
   updateNewid(data: News): Observable<News> {
     return this.http.put<News>(this.news + `/${data.id}`, data);
+  }
+  removeId(id: number):Observable<News>{
+    return this.http.delete<News>(this.news + `/${id}`,httpOption);
   }
 }
